@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MyImage from './assets/m.png'; 
+import Education from './Education'; // Assuming you have an Education component
 import { 
   Github, 
   Linkedin, 
@@ -68,66 +69,66 @@ const Portfolio = () => {
 
   const skills = {
     frontend: [
-      { name: 'React.js', level: 95, icon: '⚛️' },
-      { name: 'JavaScript (ES6+)', level: 92, icon: '🟨' },
+      { name: 'React.js', level: 65, icon: '⚛️' },
+      { name: 'JavaScript (ES6+)', level: 52, icon: '🟨' },
       // { name: 'TypeScript', level: 88, icon: '🔷' },
-      { name: 'HTML5/CSS3', level: 95, icon: '🌐' },
-      { name: 'Tailwind CSS', level: 90, icon: '🎨' },
+      { name: 'HTML5/CSS3', level: 75, icon: '🌐' },
+      { name: 'Tailwind CSS', level: 60, icon: '🎨' },
       // { name: 'Next.js', level: 85, icon: '▲' }
     ],
     backend: [
-      { name: 'Node.js', level: 90, icon: '🟢' },
-      { name: 'Express.js', level: 92, icon: '🚀' },
-      { name: 'MongoDB', level: 88, icon: '🍃' },
-      { name: 'Mongoose', level: 85, icon: '📊' },
-      { name: 'REST APIs', level: 93, icon: '🔗' },
+      { name: 'Node.js', level: 30, icon: '🟢' },
+      { name: 'Express.js', level: 32, icon: '🚀' },
+      { name: 'MongoDB', level: 58, icon: '🍃' },
+      { name: 'Mongoose', level: 45, icon: '📊' },
+      { name: 'REST APIs', level: 33, icon: '🔗' },
       // { name: 'GraphQL', level: 80, icon: '🎯' }
     ],
     tools: [
-      { name: 'Git/GitHub', level: 90, icon: '🐙' },
+      { name: 'Git/GitHub', level: 40, icon: '🐙' },
       // { name: 'Docker', level: 82, icon: '🐳' },
       // { name: 'AWS', level: 78, icon: '☁️' },
-      { name: 'Postman', level: 88, icon: '📮' },
-      { name: 'VS Code', level: 95, icon: '💻' },
-      { name: 'Webpack', level: 80, icon: '📦' }
+      { name: 'Postman', level: 68, icon: '📮' },
+      { name: 'VS Code', level: 75, icon: '💻' },
+      { name: 'Webpack', level: 30, icon: '📦' }
     ]
   };
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'Food Ordering Website',
       description: 'Full-stack MERN application with user authentication, payment integration, and admin dashboard.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
+      image: 'https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       tech: ['React', 'Node.js', 'MongoDB', 'JWT'],
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/umair-javed-mehar/Food-ordering-website',
+      demo: 'https://food-ordering-website-ten-eta.vercel.app',
       featured: true
     },
     {
-      title: 'Task Management System',
-      description: 'Collaborative project management tool with real-time updates using Socket.io.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop',
-      tech: ['React', 'Express', 'MongoDB', 'Socket.io', ],
-      github: '#',
-      demo: '#',
+      title: 'Mini E-Commerce Website using API',
+      description: 'Dynamic Mini E-Commerce Website with API Integration.',
+      image: 'https://images.unsplash.com/photo-1674027392851-7b34f21b07ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8b25saW5lJTIwc3RvcmV8ZW58MHx8MHx8fDA%3D',
+      tech: ['React', 'Express', 'MongoDB', 'Api', ],
+      github: 'https://github.com/umair-javed-mehar/Mini-Ecommerce-Mern-stack',
+      demo: 'https://api-create-product-javascript-xluy.vercel.a',
       featured: true
     },
     {
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for social media metrics with interactive charts and data visualization.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop',
-      tech: ['React', 'Node.js', 'MongoDB', 'Chart.js', 'Material-UI'],
-      github: '#',
-      demo: '#',
+      title: 'MERN Stack To-Do Application',
+      description: 'This project is a full-featured To-Do App built with the MERN Stack (MongoDB, Express.js, React.js, Node.js). It allows users to register, log in, and manage their daily tasks with a clean, responsive interface.',
+      image: 'https://plus.unsplash.com/premium_photo-1683309568772-57011d6c1b7b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHx8MA%3D%3D',
+      tech: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
+      github: 'https://github.com/umair-javed-mehar/Todo-Mern-stack',
+      demo: 'https://todo-mern-stack-delta.vercel.app',
       featured: false
     },
     {
-      title: 'Real Estate Portal',
-      description: 'Property listing platform with advanced search, filters, and virtual tour integration.',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=300&fit=crop',
-      tech: ['React','Express', 'MongoDB', 'Cloudinary', 'Mapbox'],
-      github: '#',
-      demo: '#',
+      title: 'Dynamic Form Builder using JavaScript ',
+      description: 'This project is a fully functional Dynamic Form Builder built using HTML, CSS (Tailwind), and JavaScript. It allows users to create, edit, and manage custom form fields such as text inputs, dropdowns, and multiple-choice questions in real-time. ',
+      image: 'https://plus.unsplash.com/premium_photo-1681487870238-4a2dfddc6bcb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Zm9ybXxlbnwwfHwwfHx8MA%3D%3D',
+      tech: ['Html','Css', 'Javscript'],
+      github: 'https://github.com/umair-javed-mehar/Dynamic-Form-React.js',
+      demo: 'https://dynamic-form-creater-java-script.vercel.app',
       featured: false
     }
   ];
@@ -136,7 +137,7 @@ const Portfolio = () => {
     {
       title: ' MERN Stack Developer',
       company: 'Genius Mind Zone',
-      period: '2024 - Present',
+      period: '2025 - Present',
       description: 'Led development of scalable web applications serving 100k+ users. Mentored junior developers and established best practices.'
     },
     {
@@ -211,13 +212,14 @@ const Portfolio = () => {
   <div className="flex flex-col md:flex-row items-center md:items-start justify-between max-w-6xl w-full gap-10">
     
     {/* Left Side – Image */}
-    <div className="flex-shrink-0">
-      <img
-        src={MyImage}
-        alt="Umair Javed"
-        className="w-72 h-72 rounded-full object-cover border-4 border-purple-400 shadow-2xl"
-      />
-    </div>
+<div className="flex-shrink-0">
+  <img
+    src={MyImage}
+    alt="Umair Javed"
+    className="w-40 h-40 sm:w-52 sm:h-52 md:w-72 md:h-72 rounded-full object-cover border-4 border-purple-400 shadow-2xl"
+  />
+</div>
+
 
     {/* Right Side – Content */}
     <div className="text-center md:text-left max-w-2xl">
@@ -496,6 +498,19 @@ const Portfolio = () => {
         </div>
       </section>
 
+
+{/* {education} */}
+
+
+
+<Education/>
+
+
+
+
+
+
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
@@ -529,12 +544,14 @@ const Portfolio = () => {
                 </div>
               </div>
               
-              <div className="mt-8">
-                <button className="flex items-center bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
-                  <Download className="mr-2" size={18} />
-                  Download Resume
-                </button>
-              </div>
+        <div className="mt-8">
+  <a href="Umair Javed CV Resume (1).pdf (1).pdf" download="Umair Javed CV Resume.pdf">
+    <button className="flex items-center bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+      <Download className="mr-2" size={18} />
+      Download Resume
+    </button>
+  </a>
+</div>
             </div>
             
             <div className="bg-slate-800/50 p-8 rounded-xl">
